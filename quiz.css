@@ -1,0 +1,76 @@
+html {
+    background-color: #0C0032;
+    color: ivory;
+}
+
+header {
+    padding-top: 0px;
+    font-size: 1.5cm;
+}
+
+h1 {
+    text-align: center;
+}
+
+#page1 {
+    position: relative;
+    bottom: -30px;
+    text-align: center;
+}
+
+#game_title {
+    font-size: 50px;
+}
+
+#scoreCard {
+    position: relative;
+    padding: 5px;
+    float: left;
+    border: 2px solid ivory;
+    width: 150px;
+}
+
+#question {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 80px;
+    height: 350px;
+    font-size: xx-large;
+    text-align: left;
+    border: 2px solid ivory;
+    font-style: italic;
+}
+
+#no {
+    border: 2px solid ivory;
+    text-align: start;
+    padding: 0;
+}
+
+#options {
+    position: relative;
+    bottom: -100px;
+}
+
+.option {
+    height: 150px;
+    width: 472px;
+}
+
+.Back {
+    float: left;
+    width: 200;
+    height: 100;
+}
+
+.Next {
+    width: 300;
+    height: 10;
+    float: right;
+}
+
+#back_next {
+    position: relative;
+    bottom: -300px;
+}

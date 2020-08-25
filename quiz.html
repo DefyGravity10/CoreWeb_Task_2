@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="quiz.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1 id="title">QUIZ</h1>
+        </header>
+        <main>
+            <div id="page1">
+                <div id="Instructions">
+                    <h2>Instructions</h2>
+                    <p>1)</p>
+                    <p>2)</p>
+                    <p>3)</p>
+                    <p>4)</p>
+                    <p>5)</p>
+                    <p>6)</p>
+                </div>
+                <button class="option" onclick="start()">PLAY</button>
+            </div>
+            <div id="page2">
+                <h1 id="game_title">QUIZ</h1>
+                <div id="scoreCard">
+                    <p>SCORE: <strong id="scrore"></strong></p>
+                </div>
+                <div id="question">
+                    <div id="no">1</div>
+                    <div id="que"></div>
+                </div>
+                <div id="options">
+                    <button class="option option1">1</button>
+                    <button class="option option2">2</button>
+                    <button class="option option3">3</button>
+                    <button class="option option4">4</button>
+                </div>
+                <div id="back_next">
+                    <button class="Back">BACK</button>
+                    <button class="Next">NEXT</button>
+                </div>
+            </div>
+            <script src="quiz.js"></script>
+        </main>
+    </body>
+</html>
