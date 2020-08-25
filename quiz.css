@@ -1,6 +1,6 @@
 html {
-    background-color: #0C0032;
-    color: ivory;
+    background-color: wheat;
+    color: black;
 }
 
 header {
@@ -25,8 +25,8 @@ h1 {
 #scoreCard {
     position: relative;
     padding: 5px;
-    float: left;
-    border: 2px solid ivory;
+    float: right;
+    border: 2px solid black;
     width: 150px;
 }
 
@@ -38,24 +38,40 @@ h1 {
     height: 350px;
     font-size: xx-large;
     text-align: left;
-    border: 2px solid ivory;
-    font-style: italic;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #no {
-    border: 2px solid ivory;
-    text-align: start;
+    order: 0;
+    border: 2px solid black;
+    text-align: center;
     padding: 0;
+    width: 10%;
+    height: 100%;
+    font-size: 4cm;
+}
+
+#que {
+    height: 100%;
+    width: 88%;
+    border: 2px solid black;
 }
 
 #options {
     position: relative;
     bottom: -100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .option {
     height: 150px;
-    width: 472px;
+    width: 24%;
 }
 
 .Back {
