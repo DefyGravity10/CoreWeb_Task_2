@@ -1,4 +1,5 @@
 document.getElementById("page2").style.display="none";
+var score=0;
 
 var q1={
     question: "Dummy question 1",
@@ -6,7 +7,8 @@ var q1={
     correctAnswer: "C",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
 };
 
 var q2={
@@ -15,7 +17,9 @@ var q2={
     correctAnswer: "A",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
+
 };
 
 var q3={
@@ -24,7 +28,9 @@ var q3={
     correctAnswer: "B",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
+
 };
 
 var q4={
@@ -33,7 +39,9 @@ var q4={
     correctAnswer: "C",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
+
 };
 
 var q5={
@@ -42,7 +50,8 @@ var q5={
     correctAnswer: "C",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
 };
 
 var q6={
@@ -51,7 +60,8 @@ var q6={
     correctAnswer: "D",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
 };
 
 var q7={
@@ -60,7 +70,8 @@ var q7={
     correctAnswer: "A",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
 };
 
 var q8={
@@ -69,7 +80,8 @@ var q8={
     correctAnswer: "C",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
 };
 
 var q9={
@@ -78,7 +90,8 @@ var q9={
     correctAnswer: "C",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
 };
 
 var q10={
@@ -87,7 +100,8 @@ var q10={
     correctAnswer: "B",
     status: undefined,
     answerSelected: undefined,
-    correct: undefined
+    correct: undefined,
+    button: undefined
 };
 
 var store=[q1,q2,q3,q4,q5,q6,q7,q8,q9,q10];
@@ -126,6 +140,36 @@ function randomSerial()
     }
 }
 
+function checkAnswer(s)
+{
+    if(tempObject.status==undefined)
+    {
+        tempObject.status="Answered";
+        tempObject.answerSelected=tempObject.options[s];
+        tempObject.button=assignButton();
+        if(tempObject.answerSelected==tempObject.correctAnswer)
+        {
+            score++;
+            tempObject.correct="y";
+        }
+        else{
+            tempObject.correct="n";
+        }
+        display();
+    }
+}
+
+function assignButton()
+{
+    for(var i=0;i<4;i++)
+    {
+        if(tempObject.answerSelected==tempObject.options[i])
+        {
+            return i+1;
+        }
+    }
+}
+
 function next()
 {
     if(tempIndex<9)
@@ -145,11 +189,36 @@ function back(){
     }
 }
 
+function checkArray()
+{
+    return tempObject.answerSelected;
+}
+
 function display(){
     document.getElementById("no").innerHTML=tempIndex+1;
     document.getElementById("que").innerHTML=tempObject.question;
     for(var j=0; j<4; j++)
     {
         document.getElementById(j+1+"").innerHTML=tempObject.options[j];
+    }
+    if(tempObject.status=="Answered")
+    {
+        for(j=0; j<4; j++)
+        {
+            document.getElementById(j+1+"").style.backgroundColor="white";
+        }
+        if(tempObject.correct=="y")
+            document.getElementById(tempObject.button+"").style.backgroundColor="lightgreen";
+
+        else if(tempObject.correct=="n")
+            document.getElementById(tempObject.button+"").style.backgroundColor="orangered";
+    
     }   
+    else if(tempObject.status==undefined)
+    {
+        for(j=0; j<4; j++)
+        {
+            document.getElementById(j+1+"").style.backgroundColor="white";
+        }
+    }
 }
