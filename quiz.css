@@ -27,6 +27,8 @@ h1 {
     padding: 5px;
     border: 2px solid black;
     width: 200px;
+    text-align: center;
+    font-size: large;
 }
 
 #question {
@@ -88,4 +90,6 @@ h1 {
 #back_next {
     position: relative;
     bottom: -230px;
+    display: flex;
+    justify-content: space-evenly;
 }

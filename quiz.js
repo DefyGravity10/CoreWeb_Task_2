@@ -1,4 +1,5 @@
 document.getElementById("page2").style.display="none";
+document.getElementById("page3").style.display="none";
 var score=0;
 
 var q1={
@@ -30,7 +31,6 @@ var q3={
     answerSelected: undefined,
     correct: undefined,
     button: undefined
-
 };
 
 var q4={
@@ -151,6 +151,7 @@ function checkAnswer(s)
         {
             score++;
             tempObject.correct="y";
+            document.getElementById("scorE").innerHTML=score;
         }
         else{
             tempObject.correct="n";
@@ -176,8 +177,11 @@ function next()
     {
         tempIndex++;
         tempObject=QueArray[tempIndex];
-        display();
+        display(); 
     }
+
+    document.getElementById("score").innerHTML=score;
+    
 }
 
 function back(){
@@ -187,6 +191,12 @@ function back(){
         tempObject=QueArray[tempIndex];
         display();
     }
+}
+
+function finished(){
+    document.getElementById("page2").style.display="none";
+    document.getElementById("score").innerHTML=score;
+    document.getElementById("page3").style.display="block";
 }
 
 function checkArray()
