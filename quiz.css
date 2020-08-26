@@ -25,16 +25,15 @@ h1 {
 #scoreCard {
     position: relative;
     padding: 5px;
-    float: right;
     border: 2px solid black;
-    width: 150px;
+    width: 200px;
 }
 
 #question {
     padding: 0;
     margin: 0;
     position: relative;
-    top: 80px;
+    top: 50px;
     height: 350px;
     font-size: xx-large;
     text-align: left;
@@ -88,5 +87,5 @@ h1 {
 
 #back_next {
     position: relative;
-    bottom: -300px;
+    bottom: -230px;
 }

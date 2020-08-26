@@ -24,19 +24,23 @@
             <div id="page2">
                 <h1 id="game_title">QUIZ</h1>
                 
+                <div id="scoreCard">
+                    <p>SCORE:<strong></strong></p>
+                </div>
+
                 <div id="question">
                     <div id="no"><p>1</p></div>
-                    <div id="que"><p>This is the question</p></div>
+                    <div id="que"><p>This is the qusetion</p></div>
                 </div>
                 <div id="options">
-                    <button class="option option1">1</button>
-                    <button class="option option2">2</button>
-                    <button class="option option3">3</button>
-                    <button class="option option4">4</button>
+                    <button id="1" class="option option1">1</button>
+                    <button id="2" class="option option2">2</button>
+                    <button id="3" class="option option3">3</button>
+                    <button id="4" class="option option4">4</button>
                 </div>
                 <div id="back_next">
-                    <button class="Back">BACK</button>
-                    <button class="Next">NEXT</button>
+                    <button class="Back" onclick="back()">BACK</button>
+                    <button class="Next" onclick="next()">NEXT</button>
                 </div>
             </div>
             <script src="quiz.js"></script>
