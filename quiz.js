@@ -3,9 +3,9 @@ document.getElementById("page3").style.display="none";
 var score=0;
 
 var q1={
-    question: "Dummy question 1",
-    options: ["A","B","C","D"],
-    correctAnswer: "C",
+    question: "What are the common symptoms of COVID-19?",
+    options: ["Sore Throat","Fever","Tiredness","All of these"],
+    correctAnswer: "All of these",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -13,9 +13,9 @@ var q1={
 };
 
 var q2={
-    question: "Dummy question 2",
-    options: ["A","B","C","D"],
-    correctAnswer: "A",
+    question: "How many countries, areas or territories are suffering from novel coronavirus outbreak in the World?",
+    options: ["More than 50","More than 100","More than 150","More than 200"],
+    correctAnswer: "More than 200",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -24,9 +24,9 @@ var q2={
 };
 
 var q3={
-    question: "Dummy question 3",
-    options: ["A","B","C","D"],
-    correctAnswer: "B",
+    question: "Name a clinical trial in which blood is transfused from recovered COVID-19 patients to a coronavirus patient who is in critical condition?",
+    options: ["Plasma Therapy","Solidarity","Remdesivir","Hydroxychloroquine"],
+    correctAnswer: "Plasma Therapy",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -34,9 +34,9 @@ var q3={
 };
 
 var q4={
-    question: "Dummy question 4",
-    options: ["A","B","C","D"],
-    correctAnswer: "C",
+    question: "The first case of novel coronavirus was identified in .....",
+    options: ["Beijing","Shanghai","Wuhan","Tianjin"],
+    correctAnswer: "Wuhan",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -45,9 +45,9 @@ var q4={
 };
 
 var q5={
-    question: "Dummy question 5",
-    options: ["A","B","C","D"],
-    correctAnswer: "C",
+    question: " Which of the following diseases are related to coronavirus?",
+    options: ["MERS","SARS","Both A & B","Neither A & B"],
+    correctAnswer: "Both A & B",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -55,9 +55,9 @@ var q5={
 };
 
 var q6={
-    question: "Dummy question 6",
-    options: ["A","B","C","D"],
-    correctAnswer: "D",
+    question: "Thailand announced that it has proceeded to test its novel coronavirus vaccine on which animal/bird?",
+    options: ["Monkeys","Lizards","Hens","Kites"],
+    correctAnswer: "Monkeys",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -65,9 +65,9 @@ var q6={
 };
 
 var q7={
-    question: "Dummy question 7",
-    options: ["A","B","C","D"],
-    correctAnswer: "A",
+    question: "Where was the first case of Covid-19 seen outside of China?",
+    options: ["Italy","USA","Spain","Thailand"],
+    correctAnswer: "Thailand",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -75,9 +75,9 @@ var q7={
 };
 
 var q8={
-    question: "Dummy question 8",
-    options: ["A","B","C","D"],
-    correctAnswer: "C",
+    question: "When was the first case of Covid-19 seen in India",
+    options: ["20 Jan 2020","25 Jan 2020","30 Jan 2020","1 Feb 2020"],
+    correctAnswer: "30 Jan 2020",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -85,9 +85,9 @@ var q8={
 };
 
 var q9={
-    question: "Dummy question 9",
-    options: ["A","B","C","D"],
-    correctAnswer: "C",
+    question: "Which test is done for detection of Covid-19?",
+    options: ["Patch Test","Antibody Test","RT-PCR","Both B & C"],
+    correctAnswer: "Antibody Test",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,
@@ -95,9 +95,9 @@ var q9={
 };
 
 var q10={
-    question: "Dummy question 10",
-    options: ["A","B","C","D"],
-    correctAnswer: "B",
+    question: "There are currently vaccines for the following corona viruses",
+    options: ["SARS","MERS","SARS & MERS","None of these"],
+    correctAnswer: "None of these",
     status: undefined,
     answerSelected: undefined,
     correct: undefined,

@@ -12,6 +12,11 @@ h1 {
     text-align: center;
 }
 
+
+#Instructions {
+    font-size: 22px;
+}
+
 #page1 {
     position: relative;
     bottom: -30px;
@@ -36,8 +41,8 @@ h1 {
     margin: 0;
     position: relative;
     top: 50px;
-    height: 350px;
-    font-size: xx-large;
+    height: 220px;
+    font-size: 65px;
     text-align: left;
     display: flex;
     flex-direction: row;
@@ -49,7 +54,6 @@ h1 {
     order: 0;
     border: 2px solid black;
     text-align: center;
-    padding: 0;
     width: 10%;
     height: 100%;
     font-size: 4cm;
@@ -73,6 +77,7 @@ h1 {
 .option {
     height: 150px;
     width: 24%;
+    font-size: 25px;
 }
 
 .Back {
@@ -92,4 +97,10 @@ h1 {
     bottom: -230px;
     display: flex;
     justify-content: space-evenly;
+}
+
+#scoreFinal{
+    position: relative;
+    top: 300px;
+    font-size: 5cm;
 }

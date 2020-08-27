@@ -12,12 +12,12 @@
             <div id="page1">
                 <div id="Instructions">
                     <h2>Instructions</h2>
-                    <p>1)</p>
-                    <p>2)</p>
-                    <p>3)</p>
-                    <p>4)</p>
-                    <p>5)</p>
-                    <p>6)</p>
+                    <p>1) This quiz conatins a total of 10 questions</p>
+                    <p>2) Every right answer gets you a point</p>
+                    <p>3) You can skip a question and answer it later before final submit</p>
+                    <p>4) You can answer a question only once</p>
+                    <p>5) Lets see how much you know about Covid-19</p>
+                    <p>BEST OF LUCK!!</p>
                 </div>
                 <button class="option" onclick="start()">PLAY</button>
             </div>
@@ -29,8 +29,8 @@
                 </div>
 
                 <div id="question">
-                    <div id="no"><p>1</p></div>
-                    <div id="que"><p>This is the qusetion</p></div>
+                    <div id="no"><p class="center">1</p></div>
+                    <div id="que"><p class="center">This is the qusetion</p></div>
                 </div>
                 <div id="options">
                     <button id="1" class="option option1" onclick="checkAnswer(0)">1</button>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div id="page3">
-                <h1>YOUR SCORE: <strong id="score"></strong></h1>
+                <h1 id="scoreFinal">YOUR SCORE: <strong id="score"></strong></h1>
             </div>
             <script src="quiz.js"></script>
         </main>
