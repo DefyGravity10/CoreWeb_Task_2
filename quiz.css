@@ -1,5 +1,5 @@
 html {
-    background-color: wheat;
+    background-color: #5FA8D3;
     color: black;
 }
 
@@ -29,18 +29,21 @@ h1 {
 
 #scoreCard {
     position: relative;
+    top: 1.5cm;
     padding: 5px;
     border: 2px solid black;
     width: 200px;
     text-align: center;
     font-size: large;
+    background-color: #CAE9FF;
+
 }
 
 #question {
     padding: 0;
     margin: 0;
     position: relative;
-    top: 50px;
+    top: 100px;
     height: 220px;
     font-size: 65px;
     text-align: left;
@@ -57,17 +60,21 @@ h1 {
     width: 10%;
     height: 100%;
     font-size: 4cm;
+    background-color: #CAE9FF;
+
 }
 
 #que {
     height: 100%;
     width: 88%;
     border: 2px solid black;
+    background-color: #CAE9FF;
+
 }
 
 #options {
     position: relative;
-    bottom: -100px;
+    bottom: -130px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
