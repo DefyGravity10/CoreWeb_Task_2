@@ -87,6 +87,22 @@ h1 {
     font-size: 25px;
 }
 
+#navBar {
+    background-color: #DEA47E;
+    font-size: 20px;
+    position: relative;
+    bottom: -230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px solid black;
+}
+
+.nav {
+    width: 80px;
+    font-size: 30px;
+}
+
 .Back {
     float: left;
     width: 200;
@@ -101,7 +117,7 @@ h1 {
 
 #back_next {
     position: relative;
-    bottom: -230px;
+    bottom: -300px;
     display: flex;
     justify-content: space-evenly;
 }

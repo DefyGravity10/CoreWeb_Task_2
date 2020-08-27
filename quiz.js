@@ -2,6 +2,7 @@ document.getElementById("page2").style.display="none";
 document.getElementById("page3").style.display="none";
 var score=0;
 var playerName;
+var temp;
 
 var q1={
     question: "What are the common symptoms of COVID-19?",
@@ -158,6 +159,9 @@ function checkAnswer(s)
         else{
             tempObject.correct="n";
         }
+
+        document.getElementById(tempIndex+1+""+0).style.backgroundColor="lightgreen";
+
         display();
     }
 }
@@ -171,6 +175,14 @@ function assignButton()
             return i+1;
         }
     }
+}
+
+function navigate(num)
+{
+    temp=num;
+    tempIndex=temp;
+    tempObject=QueArray[tempIndex];
+    display();
 }
 
 function next()
