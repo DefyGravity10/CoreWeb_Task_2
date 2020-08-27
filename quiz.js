@@ -1,6 +1,7 @@
 document.getElementById("page2").style.display="none";
 document.getElementById("page3").style.display="none";
 var score=0;
+var playerName;
 
 var q1={
     question: "What are the common symptoms of COVID-19?",
@@ -112,6 +113,7 @@ var tempIndex, tempObject;
 
 function start()
 {
+    playerName=document.getElementById("name").value;
     document.getElementById("page1").style.display="none";
     document.getElementById("title").style.display="none";
     document.getElementById("page2").style.display="block";
@@ -194,6 +196,7 @@ function back(){
 }
 
 function finished(){
+    document.getElementById("pname").innerHTML=playerName;
     document.getElementById("page2").style.display="none";
     document.getElementById("score").innerHTML=score;
     document.getElementById("page3").style.display="block";
