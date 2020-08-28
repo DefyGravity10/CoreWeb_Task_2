@@ -7,6 +7,16 @@ var playerName;
 var temp;
 var seconds=100;
 
+var today = new Date();
+var date, time;
+
+var highscore={
+    score: 0,
+    name: undefined,
+    date: undefined,
+    time: undefined
+};
+
 var q1={
     question: "What are the common symptoms of COVID-19?",
     options: ["Sore Throat","Fever","Tiredness","All of these"],
@@ -238,7 +248,46 @@ function back(){
 function finished(){
     stop_timing();
     score+=0.01*seconds;
+
+    date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+    if(localStorage.getItem("high")==null)
+    {
+        highscore.score=score;
+        highscore.time=time;
+        highscore.date=date;
+        highscore.name=playerName;
+        localStorage.setItem("high",highscore.score);
+        localStorage.setItem("high_name",highscore.name);
+        localStorage.setItem("high_time",highscore.time);
+        localStorage.setItem("high_date",highscore.date);
+    }
+    else{
+        highscore.score=localStorage.getItem("high");
+        if(score>highscore.score)
+        {
+            highscore.score=score;
+            highscore.time=time;
+            highscore.date=date;
+            highscore.name=playerName;
+            localStorage.setItem("high",highscore.score);
+            localStorage.setItem("high_name",highscore.name);
+            localStorage.setItem("high_time",highscore.time);
+            localStorage.setItem("high_date",highscore.date);
+        }
+        else{
+            highscore.name=localStorage.getItem("high_name");
+            highscore.date=localStorage.getItem("high_date");
+            highscore.time=localStorage.getItem("high_time");
+        }
+    }
     document.getElementById("pname").innerHTML=playerName;
+    document.getElementById("high_name").innerHTML=highscore.name;
+    document.getElementById("high_score").innerHTML=highscore.score;
+    document.getElementById("high_date").innerHTML=highscore.date;
+    document.getElementById("high_time").innerHTML=highscore.time;
+
     document.getElementById("page2").style.display="none";
     document.getElementById("score").innerHTML=score;
     document.getElementById("page3").style.display="block";

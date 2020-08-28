@@ -122,8 +122,9 @@ h1 {
     justify-content: space-evenly;
 }
 
-#scoreFinal{
+#page3 {
     position: relative;
-    top: 300px;
-    font-size: 5cm;
+    top: 100px;
+    text-align: center;
+    font-size: 1cm;
 }
