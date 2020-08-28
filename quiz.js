@@ -3,6 +3,7 @@ document.getElementById("page3").style.display="none";
 var score=0;
 var playerName;
 var temp;
+var seconds=100;
 
 var q1={
     question: "What are the common symptoms of COVID-19?",
@@ -125,6 +126,27 @@ function start()
     tempObject=QueArray[tempIndex];
 
     display();
+    timing();
+}
+
+function timing()                                                           
+{
+    myvar=setInterval(ttiming, 1000);
+}
+
+function ttiming(){                                                         
+    seconds--;
+    document.getElementById("time").innerHTML=seconds;
+    
+    if(seconds==0)                                                             
+    {
+        finished();                                                           
+    }       
+}
+
+function stop_timing()                                                       
+{
+    clearInterval(myvar);
 }
 
 function randomSerial()
@@ -208,6 +230,8 @@ function back(){
 }
 
 function finished(){
+    stop_timing();
+    score+=0.01*seconds;
     document.getElementById("pname").innerHTML=playerName;
     document.getElementById("page2").style.display="none";
     document.getElementById("score").innerHTML=score;
