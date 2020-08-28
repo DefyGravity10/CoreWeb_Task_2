@@ -1,5 +1,7 @@
 document.getElementById("page2").style.display="none";
 document.getElementById("page3").style.display="none";
+document.getElementById("op").disabled=true;
+
 var score=0;
 var playerName;
 var temp;
@@ -112,6 +114,10 @@ var unique_array=[1,2,3,4,5,6,7,8,9,10];
 var QueArray=[];
 
 var tempIndex, tempObject;
+
+function enableButton(){
+    document.getElementById("op").disabled=false;
+}
 
 function start()
 {
