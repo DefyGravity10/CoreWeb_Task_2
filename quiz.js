@@ -6,6 +6,7 @@ var score=0;
 var playerName;
 var temp;
 var seconds=100;
+var totalAnswered=0;
 
 var today = new Date();
 var date, time;
@@ -185,6 +186,7 @@ function checkAnswer(s)
 {
     if(tempObject.status==undefined)
     {
+        totalAnswered++;
         tempObject.status="Answered";
         tempObject.answerSelected=tempObject.options[s];
         tempObject.button=assignButton();
@@ -201,6 +203,13 @@ function checkAnswer(s)
         document.getElementById(tempIndex+1+""+0).style.backgroundColor="lightgreen";
 
         display();
+
+        if(totalAnswered==10)
+        {
+            setTimeout(function(){
+                window.alert("You have answered all question\nPlease submit to maximize time bonus");
+            },1000);
+        }
     }
 }
 
